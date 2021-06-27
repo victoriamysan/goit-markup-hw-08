@@ -1,0 +1,50 @@
+.logo {
+    color: getColor('title-color');
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.67;
+    margin-right: 88px;
+    transition: color $transition-duration $cubic-bezier;
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px; 
+      font-size: 26px;
+      line-height: 1.2;
+    }
+
+  &:hover,
+  &:focus {
+    color: getColor('accent-color');
+  }
+
+  &__web {
+    color: getColor('accent-color');
+    transition: color $transition-duration $cubic-bezier;
+  }
+
+  &__web--inverse {
+    transition: color $transition-duration $cubic-bezier;
+  }
+  }
+  
+  .logo:hover .logo__web,
+  .logo:focus .logo__web {
+    color: getColor('title-color');
+  }
+  
+  .logo--inverse {
+    color: getColor('secondary-text-color');
+    margin-right: 0;
+    transition: color $transition-duration $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    color: getColor('accent-color');
+  }
+  }
+  
+  .logo--inverse:hover .logo__web--inverse,
+  .logo--inverse:focus .logo__web--inverse {
+    color: getColor('secondary-text-color');
+  }

@@ -1,0 +1,115 @@
+%btn {
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.accent__btn {
+  @extend %btn;
+  color: getColor("secondary-text-color");
+  background-color: getColor("accent-color");
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  padding: 10px 32px;
+  margin-top: 30px;
+  box-shadow: $btn-shadow;
+  transition: color $transition-duration $cubic-bezier,
+    background-color $transition-duration $cubic-bezier;
+
+  &--shorter {
+    margin-top: 0;
+    padding: 10px 29px;
+  }
+
+  &--longer {
+    padding: 10px 55px;
+  }
+
+  &--hovered:hover,
+  &--hovered:focus {
+    color: getColor("title-color");
+    background-color: getColor("second-bg-color");
+  }
+}
+
+.tab-nav__btn {
+  @extend %btn;
+  color: getColor("title-color");
+  background-color: getColor("second-bg-color");
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  padding: 6px 22px;
+  transition: color $transition-duration $cubic-bezier,
+    background-color $transition-duration $cubic-bezier,
+    box-shadow $transition-duration $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    color: getColor("secondary-text-color");
+    background-color: getColor("accent-color");
+    box-shadow: $btn-shadow;
+  }
+}
+
+.header__mobile-menu-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: getColor("accent-color");
+  }
+}
+
+.btn-close {
+  position: absolute;
+  display: flex;
+  right: 8px;
+  top: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #000000;
+  background-color: getColor("bg-color");
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: color $transition-duration $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    color: getColor("accent-color");
+  }
+}
+
+.mobile-menu__btn-close {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 15px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  color: getColor ("title-color");
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    color: getColor("accent-color");
+  }
+}

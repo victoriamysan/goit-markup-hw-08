@@ -1,0 +1,62 @@
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+
+    &--bgdark {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    &__icon-item:not(:first-child) {
+      margin-left: 10px;
+    }
+  
+    &__icon-item--bgdark:not(:first-child) {
+      margin-left: 10px;
+      }
+  }
+  
+  %socials__icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  }
+  
+  .socials__icon-wrapper {
+    @extend %socials__icon-wrap;
+    background-color: getColor('bg-color');
+    color: getColor('icon-color');
+    transition: color $transition-duration $cubic-bezier,
+    background-color $transition-duration $cubic-bezier;
+
+    &:hover,
+    &:focus {
+      background-color: getColor('accent-color');
+      color: getColor('bg-color');
+    }
+  }
+  
+  .socials__icon-wrapper--bgdark {
+    @extend %socials__icon-wrap;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: getColor('bg-color');
+    transition: color $transition-duration $cubic-bezier,
+    background-color $transition-duration $cubic-bezier;
+    
+    &:hover,
+    &:focus {
+    background-color: getColor('accent-color');
+    color: getColor('bg-color');
+  }
+  }
+
+  
+  
+  
+  
+ 

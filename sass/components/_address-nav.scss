@@ -1,0 +1,105 @@
+.header__address-nav {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    margin-left: auto;  
+  }
+    
+  @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.14;
+      display: flex;
+      margin-left: auto; 
+    } 
+  }
+
+.header .address-nav__item:not(:first-child) {
+   margin-top: 32px;
+   
+  @media screen and (min-width: 768px) {
+    margin-top: 10px;
+  }
+  
+  @media screen and (min-width: 1200px) { 
+    margin-top: 0;
+    margin-left: 50px;
+  }
+}
+
+  .footer__address-nav {
+    color: getColor('footer-address-color');
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    }  
+  }
+  
+  .address-nav__icon {
+    margin-right: 8px;
+
+    @media screen and (min-width: 1200px) {
+    margin-right: 10px; 
+    }
+  }
+
+  .address-nav__icon--envelope {
+    width: 14px;
+    height: 10px;
+
+    @media screen and (min-width: 1200px){
+      width: 16px;
+      height: 12px;
+    }
+  }
+
+  .address-nav__icon--phone{
+    width: 10px;
+    height: 14px;
+
+    @media screen and (min-width: 1200px){
+      width: 10px;
+      height: 16px;
+    }
+  }
+
+  .address-nav__link {
+    transition: color $transition-duration $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    color: getColor('accent-color');
+  }
+
+  &--positioned {
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 9px; 
+      margin-bottom: 0;
+    } 
+  }
+  }
+  
+  .address-nav__map-addr {
+    color: getColor('secondary-text-color');
+    margin-top: 20px;
+
+    @media screen and (min-width: 1200px){
+      margin-top: 0; 
+    }
+
+  }
